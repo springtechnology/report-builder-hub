@@ -109,6 +109,12 @@ FEATURE_FLAGS = {
 HTTP_HEADERS = {
     "X-Frame-Options": "ALLOWALL"
 }
+CORS_OPTIONS = {
+    "supports_credentials": True,
+    "allow_headers": ["*"],
+    "resources": ["*"],
+    "origins": ["*"]  # Allow all origins
+}
 GUEST_ROLE_NAME= 'embed_dashboard'
 GUEST_TOKEN_JWT_SECRET = "test-guest-secret-change-me"
 GUEST_TOKEN_JWT_EXP_SECONDS = 3600  # 1 hour
