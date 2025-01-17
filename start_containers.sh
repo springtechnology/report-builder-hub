@@ -1,1 +1,1 @@
-docker compose -f 'docker-compose-image-tag.yaml' -p 'report_builder_deployment' up -d
+docker compose -f 'docker-compose-image-tag.yml' -p 'report_builder_deployment' up -d

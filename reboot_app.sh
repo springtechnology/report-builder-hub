@@ -1,1 +1,1 @@
-docker compose -f 'deploy/docker-compose-image-tag.yaml' -p 'report_builder_deployment' restart app
+docker compose -f 'deploy/docker-compose-image-tag.yml' -p 'report_builder_deployment' restart app
