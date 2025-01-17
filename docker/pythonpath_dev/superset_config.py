@@ -99,9 +99,15 @@ CELERY_CONFIG = CeleryConfig
 SESSION_COOKIE_SAMESITE = None
 ENABLE_PROXY_FIX = True
 PUBLIC_ROLE_LIKE_GAMMA = True
+ENABLE_CORS = True
+ENABLE_PROXY_FIX = True
 FEATURE_FLAGS = {
     "EMBEDDED_SUPERSET": True,
+    "GUEST_TOKEN": True,
     "ALERT_REPORTS": True
+}
+HTTP_HEADERS = {
+    "X-Frame-Options": "ALLOWALL"
 }
 GUEST_ROLE_NAME= 'embed_dashboard'
 GUEST_TOKEN_JWT_SECRET = "test-guest-secret-change-me"
