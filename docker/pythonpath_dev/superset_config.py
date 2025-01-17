@@ -103,6 +103,9 @@ FEATURE_FLAGS = {
     "EMBEDDED_SUPERSET": True,
     "ALERT_REPORTS": True
 }
+GUEST_ROLE_NAME= 'embed_dashboard'
+GUEST_TOKEN_JWT_SECRET = "test-guest-secret-change-me"
+GUEST_TOKEN_JWT_EXP_SECONDS = 3600  # 1 hour
 ALERT_REPORTS_NOTIFICATION_DRY_RUN = True
 WEBDRIVER_BASEURL = "http://superset:8088/"  # When using docker compose baseurl should be http://superset_app:8088/  # noqa: E501
 # The base URL for the email report hyperlinks.
