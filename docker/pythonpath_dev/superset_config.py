@@ -99,22 +99,24 @@ CELERY_CONFIG = CeleryConfig
 SESSION_COOKIE_SAMESITE = None
 ENABLE_PROXY_FIX = True
 PUBLIC_ROLE_LIKE_GAMMA = True
-ENABLE_CORS = True
 ENABLE_PROXY_FIX = True
 FEATURE_FLAGS = {
     "EMBEDDED_SUPERSET": True,
     "GUEST_TOKEN": True,
     "ALERT_REPORTS": True
 }
-HTTP_HEADERS = {
-    "X-Frame-Options": "ALLOWALL"
-}
+OVERRIDE_HTTP_HEADERS = {'X-Frame-Options': 'ALLOWALL'}
+TALISMAN_ENABLED = False
+ENABLE_CORS = True
+HTTP_HEADERS={"X-Frame-Options":"ALLOWALL"}
 CORS_OPTIONS = {
+    
     "supports_credentials": True,
     "allow_headers": ["*"],
     "resources": ["*"],
     "origins": ["*"]  # Allow all origins
 }
+
 GUEST_ROLE_NAME= 'embed_dashboard'
 GUEST_TOKEN_JWT_SECRET = "test-guest-secret-change-me"
 GUEST_TOKEN_JWT_EXP_SECONDS = 3600  # 1 hour
