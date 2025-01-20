@@ -105,17 +105,18 @@ FEATURE_FLAGS = {
     "GUEST_TOKEN": True,
     "ALERT_REPORTS": True
 }
-OVERRIDE_HTTP_HEADERS = {'X-Frame-Options': 'ALLOWALL'}
+# OVERRIDE_HTTP_HEADERS = {'X-Frame-Options': 'ALLOWALL'}
 TALISMAN_ENABLED = False
 ENABLE_CORS = True
 HTTP_HEADERS={"X-Frame-Options":"ALLOWALL"}
 CORS_OPTIONS = {
-    
     "supports_credentials": True,
-    "allow_headers": ["*"],
+    "allow_headers": ["Content-Type", "Authorization", "X-CSRFToken"],
     "resources": ["*"],
-    "origins": ["*"]  # Allow all origins
+    "origins": ["http://localhost:8880", "http://127.0.0.1:8880"],  # Allow your development frontend origin
 }
+
+OVERRIDE_HTTP_HEADERS = {"X-Frame-Options": "SAMEORIGIN"}
 
 GUEST_ROLE_NAME= 'embed_dashboard'
 GUEST_TOKEN_JWT_SECRET = "test-guest-secret-change-me"
