@@ -106,6 +106,7 @@ FEATURE_FLAGS = {
     "ALERT_REPORTS": True
 }
 # OVERRIDE_HTTP_HEADERS = {'X-Frame-Options': 'ALLOWALL'}
+WTF_CSRF_ENABLED=False #To enable csrf token
 TALISMAN_ENABLED = False
 ENABLE_CORS = True
 HTTP_HEADERS={"X-Frame-Options":"ALLOWALL"}
