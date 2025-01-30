@@ -308,7 +308,7 @@ AUTH_RATE_LIMIT = "5 per second"
 # GLOBALS FOR APP Builder
 # ------------------------------
 # Uncomment to setup Your App name
-APP_NAME = "Salescore Report Builder"
+APP_NAME = "SalesCore Report Builder"
 
 # Specify the App icon
 APP_ICON = "/static/assets/images/salescore-logo-horiz.png"
